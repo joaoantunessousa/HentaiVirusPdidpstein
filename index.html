@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brasil o país do futebol!</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+
     <style>
         html, body {
             min-height: 100vh;
@@ -13,87 +15,105 @@
         }
 
         body { 
-            /* Mantém o fundo pastel suave de verde para amarelo */
-            background-image: linear-gradient(to bottom, #d2f1dd, #fbf3cd); 
-            background-attachment: fixed; 
-            font-family: Arial, sans-serif;
-            color: #2c3e50;
+            /* Fundo degradê verde e amarelo bem vivo, simulando as cores da bandeira */
+            background-image: 
+                url('https://upload.wikimedia.org/wikipedia/pt/b/b8/Cbf_logo.svg'), 
+                linear-gradient(135deg, #00b33e, #ffea00); 
+            
+            background-repeat: no-repeat, no-repeat;
+            /* Logo da CBF no cantinho para dar o selo de qualidade */
+            background-position: right 30px bottom 30px, center; 
+            background-size: 150px, cover; 
+            background-attachment: fixed, fixed; 
+            
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
         }
 
-        /* Container centralizado */
+        /* Container principal */
         .conteudo-site {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 30px 20px;
-            box-sizing: border-box;
-        }
-
-        /* Seção de introdução */
-        .intro {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .intro h1 {
-            font-size: 2.4rem;
-            color: #1b4d3e;
-            margin-bottom: 15px;
-        }
-
-        .intro p {
-            font-size: 1.1rem;
             max-width: 850px;
-            margin: 10px auto;
-            line-height: 1.5;
-        }
-
-        /* Títulos das seções */
-        .secao-titulo {
+            margin: 0 auto;
+            padding: 40px 20px;
+            margin-right: 260px; 
             text-align: center;
-            font-size: 1.6rem;
-            color: #1b4d3e;
-            margin: 40px 0 20px 0;
-            padding-bottom: 5px;
         }
 
-        /* Alinhamento Horizontal Simples */
-        .grid-horizontal {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 40px;
+        /* Ajuste para celulares e telas menores */
+        @media (max-width: 1100px) {
+            .conteudo-site {
+                margin-right: auto; 
+                padding-bottom: 200px;
+            }
+            body {
+                background-position: center bottom 20px, center;
+                background-size: 120px, cover;
+            }
         }
 
-        /* Cards Simplificados (Mais limpos e sem efeitos complexos) */
-        .card {
-            background: #ffffff; /* Fundo branco sólido e limpo */
-            border: 1px solid #cbd5e1; /* Borda cinza simples */
-            border-radius: 8px;
+        /* Título Principal Estilo "Banner de Trabalho" */
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fff;
+            text-shadow: 3px 3px 0px #005c25, 5px 5px 15px rgba(0,0,0,0.4);
+            margin-bottom: 30px;
+        }
+
+        /* Subtítulos */
+        h2 {
+            font-size: 2rem;
+            color: #ffea00;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+
+        /* Texto de introdução destacado */
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            background: rgba(0, 0, 0, 0.3);
             padding: 20px;
-            width: 100%;
-            max-width: 320px; 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            box-sizing: border-box;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(5px);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+        }
+
+        /* Os "Cards" de cada seção - Segredo do visual estilo estudante caprichoso */
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        /* Efeito divertido quando passa o mouse por cima do card */
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         .card p {
-            font-size: 0.95rem;
-            line-height: 1.4;
-            margin-bottom: 15px;
-            color: #34495e;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
-        /* Imagens padronizadas */
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover; 
-            border-radius: 6px;
+        /* Estilização moderna das fotos */
+        img {
+            border: 6px solid #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -101,71 +121,68 @@
 
 <div class="conteudo-site">
 
-    <div class="intro">
-        <h1>Brasil o país do futebol!</h1>
-        <p><b>Possuindo apenas 5 copas do mundo e sendo penta campeão mundial, nós somos o maior campeão do maior campeonato do mundo!</b></p>
-        <p><b>Temos os considerados os melhores jogadores de toda a história do futebol, inclusive o nosso falecido Rei Pelé.</b></p>
-        <p><b>O Brasil ganhou a Copa do Mundo da FIFA cinco vezes, sendo o maior campeão da história do torneio. Os anos das conquistas são: 1958, 1962, 1970, 1994 e 2002.</b></p>
+    <h1>🇧🇷 Brasil, o país do futebol! ⚽</h1>
+
+    <div class="intro-text">
+        <p>Sendo o único <b>penta campeão mundial</b>, nós somos o maior vencedor do maior campeonato do mundo! 🏆</p>
+        <p>Temos os considerados os melhores jogadores de toda a história do futebol, inclusive o nosso eterno Rei Pelé.👑</p>
+        <p>O Brasil ganhou a Copa do Mundo da FIFA cinco vezes, sendo o maior campeão da história do torneio. Os anos das conquistas são: 1958, 1962, 1970, 1994 e 2002.</p>
     </div>
 
-    <h2 class="secao-titulo">As Cinco Estrelas (Copas do Mundo)</h2>
-    <div class="grid-horizontal">
-        
-        <div class="card">
-            <p><b>Seleção de 58.</b> O Brasil enfrentou e derrotou a seleção da Suécia por 5 a 2.</p>
-            <img src="brasil58.jpg" alt="Copa 58">
-        </div>
-
-        <div class="card">
-            <p><b>Seleção de 62.</b> A grande final foi contra a Tchecoslováquia, vencida pelo Brasil por 3 a 1.</p>
-            <img src="unnamed.jpg" alt="Copa 62">
-        </div>
-
-        <div class="card">
-            <p><b>Seleção de 70.</b> O Brasil enfrentou e ganhou da Itália pelo placar de 4 a 1.</p>
-            <img src="Seleção-brasileira-3-a-0-Combinado-Irapuato-preparação-Copa-do-Mundo-1970-25.04.1970-Foto-Divulgação-CBF.png" alt="Copa 70">
-        </div>
-
-        <div class="card">
-            <p><b>Seleção de 94.</b> O Brasil superou a Itália na disputa por pênaltis (3 a 2), após um empate em 0 a 0 no tempo normal e prorrogação.</p>
-            <img src="c_0.jpeg" alt="Copa 94">
-        </div>
-
-        <div class="card">
-            <p><b>Seleção de 2002.</b> O Brasil bateu a Alemanha por 2 a 0, conquistando o pentacampeonato.</p>
-            <img src="ppix7.170201-674x450.jpg" alt="Copa 2002">
-        </div>
-
+    <div class="card">
+        <p><b>🌟 Seleção de 58:</b> O Brasil enfrentou e derrotou a seleção da Suécia por 5 a 2!</p>
+        <img src="brasil58.jpg" width="700" alt="Seleção de 1958">
     </div>
 
-    <h2 class="secao-titulo">Os Comandantes da Nossa História</h2>
-    <div class="grid-horizontal">
+    <div class="card">
+        <p><b>🌟 Seleção de 62:</b> A grande final foi contra a Tchecoslováquia, vencida pelo Brasil por 3 a 1.</p>
+        <img src="unnamed.jpg" width="700" alt="Seleção de 1962">
+    </div>
 
-        <div class="card">
-            <p><b>Vicente Feola 58</b> - O seu grande destaque à frente da equipe foi a insistência na convocação de um jovem Pelé, de 17 anos, que viajou lesionado.</p>
-            <img src="Vicente_feola_julesrimet.jpg" alt="Vicente Feola">
-        </div>
+    <div class="card">
+        <p><b>🌟 Seleção de 70:</b> O Brasil enfrentou e ganhou da Itália pelo placar de 4 a 1. Que time!</p>
+        <img src="Seleção-brasileira-3-a-0-Combinado-Irapuato-preparação-Copa-do-Mundo-1970-25.04.1970-Foto-Divulgação-CBF.png" width="700" alt="Seleção de 1970">
+    </div>
 
-        <div class="card">
-            <p><b>Aymoré Moreira 62</b> - O grande destaque foi Garrincha, que assumiu o protagonismo absoluto após Pelé sofrer uma lesão grave no segundo jogo.</p>
-            <img src="Aymoré_Moreira_(1963).png" alt="Aymoré Moreira">
-        </div>
+    <div class="card">
+        <p><b>🌟 Seleção de 94:</b> O Brasil superou a Itália na disputa por pênaltis (3 a 2), após um empate tenso em 0 a 0 no tempo normal e prorrogação.</p>
+        <img src="c_0.jpeg" width="700" alt="Seleção de 1994">
+    </div>
 
-        <div class="card">
-            <p><b>Zagallo 70</b> - Embora Saldanha tenha montado a base, foi o mestre Zagallo quem assumiu o comando na Copa de 1970, organizando o time perfeito.</p>
-            <img src="images.jpeg" alt="Zagallo">
-        </div>
+    <div class="card">
+        <p><b>🌟 Seleção de 2002:</b> O Brasil bateu a Alemanha por 2 a 0, conquistando o tão sonhado pentacampeonato!</p>
+        <img src="ppix7.170201-674x450.jpg" width="700" alt="Seleção de 2002">
+    </div>
 
-        <div class="card">
-            <p><b>Carlos Alberto Parreira 94</b> - Quebrou um jejum de 24 anos sem títulos mundiais com um esquema tático sólido, eficiente e pragmático.</p>
-            <img src="04.06.2010MCA8490.jpg" alt="Parreira">
-        </div>
+    <h2>🧠 Os Comandantes do Penta</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 30px;">Tivemos uma jornada longa e desafiadora, liderada por técnicos super inteligentes e táticos que guiaram nossa nação rumo à vitória!</p>
 
-        <div class="card">
-            <p><b>Luiz Felipe Scolari 2002</b> - Alcançou o penta criando a famosa "Família Scolari" e ajustando taticamente o time com três zagueiros.</p>
-            <img src="i.jpeg" alt="Felipão">
-        </div>
+    <div class="card">
+        <p><b>Vicente Feola (1958)</b> - O seu grande destaque e marco à frente da equipe foi a aposta e a insistência na convocação de um jovem Pelé, que tinha apenas 17 anos e viajou para a Suécia lesionado.</p>
+        <img src="Vicente_feola_julesrimet.jpg" width="500" alt="Vicente Feola">
+    </div>
 
+    <div class="card">
+        <p><b>Aymoré Moreira (1962)</b> - O grande destaque sob a direção dele foi Garrincha, que assumiu o protagonismo absoluto da equipe após Pelé sofrer uma lesão grave logo no segundo jogo do torneio. O "Anjo de Pernas Tortas" brilhou com dribles desconcertantes, gols decisivos e foi eleito o melhor jogador daquela Copa do Mundo.</p>
+        <img src="Aymoré_Moreira_(1963).png" width="500" alt="Aymoré Moreira">
+    </div>
+
+    <div class="card">
+        <p><b>Zagallo (1970)</b> - Embora João Saldanha tenha montado a base nas eliminatórias, foi o mestre Zagallo quem assumiu o comando técnico na Copa do Mundo de 1970, organizando o time perfeito que encantou o mundo e conquistou o Tri de forma genial.</p>
+        <img src="images.jpeg" width="500" alt="Zagallo">
+    </div>
+
+    <div class="card">
+        <p><b>Carlos Alberto Parreira (1994)</b> - O grande destaque de Carlos Alberto Parreira como técnico foi o comando da Seleção Brasileira na histórica conquista do Tetracampeonato na Copa do Mundo de 1994, nos Estados Unidos. O treinador quebrou um jejum de 24 anos sem títulos mundiais do Brasil com um esquema tático sólido, eficiente e pragmático.</p>
+        <img src="04.06.2010MCA8490.jpg" width="500" alt="Carlos Alberto Parreira">
+    </div>
+
+    <div class="card">
+        <p><b>Luiz Felipe Scolari (2002)</b> - Luiz Felipe Scolari (Felipão) alcançou seu maior destaque como técnico da Seleção Brasileira ao conquistar o pentacampeonato mundial na Copa do Mundo de 2002, sediada na Coreia do Sul e no Japão.<br><br>
+        Sua passagem vitoriosa ficou marcada por alguns pilares e momentos específicos:<br><br>
+        🤝 <b>A "Família Scolari":</b> Ele foi fundamental para criar um ambiente de forte união e grupo, apelidado de "Família Scolari", protegendo seus jogadores das críticas e focando no aspecto motivacional.<br><br>
+        ⚙️ <b>Ajuste Tático:</b> Para dar liberdade aos alas (Cafu e Roberto Carlos) e aos craques do meio para frente (como Rivaldo e Ronaldinho Gaúcho), ele implementou um esquema com uma linha de três zagueiros.</p>
+        <img src="i.jpeg" width="500" alt="Luiz Felipe Scolari">
     </div>
 
 </div>
