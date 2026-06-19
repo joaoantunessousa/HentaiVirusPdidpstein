@@ -13,18 +13,39 @@
         }
 
         body { 
-            /* Aqui está o seu degradê com as cores do Brasil */
-            background-image: linear-gradient(to bottom, #009c3b, #ffdf00); 
-            background-attachment: fixed; 
-            font-family: Arial, sans-serif; /* Uma fonte mais limpa para leitura */
-            color: #ffffff; /* Deixa o texto branco para contrastar com o fundo escuro do topo */
+            /* Coloca a logo da CBF e o degradê juntos no fundo */
+            background-image: 
+                url('https://upload.wikimedia.org/wikipedia/pt/b/b8/Cbf_logo.svg'), 
+                linear-gradient(to bottom, #009c3b, #ffdf00); 
+            
+            background-repeat: no-repeat, no-repeat;
+            /* Fixa a logo no canto inferior direito (20px de distância das bordas) */
+            background-position: right 20px bottom 20px, center; 
+            background-size: 180px, cover; 
+            background-attachment: fixed, fixed; 
+            
+            font-family: Arial, sans-serif;
+            color: #ffffff;
         }
 
-        /* Um pequeno ajuste para o texto não sumir no amarelo lá embaixo */
+        /* Área do conteúdo: deixa o espaço da direita livre para a logo */
+        .conteudo-site {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-right: 250px; 
+        }
+
+        /* Ajuste para telas menores (como celulares) */
+        @media (max-width: 1100px) {
+            .conteudo-site {
+                margin-right: auto; 
+                padding-bottom: 200px; /* Garante que o fim do texto não tampe a logo */
+            }
+        }
+
         p, h1 {
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-            max-width: 800px; /* Evita que as linhas fiquem longas demais */
-            padding: 0 20px;
         }
 
         img {
@@ -32,15 +53,18 @@
             border-radius: 8px;
             margin-bottom: 20px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
 <body>
 <center>
+<div class="conteudo-site">
 
     <h1>Brasil o país do futebol!</h1>
 
-    <p><b>Possuindo 5 copas do mundo e sendo penta campeão mundial, nós somos o maior campeão do maior campeonato do mundo!</b></p>
+    <p><b>Possuindo apenas 5 copas do mundo e sendo penta campeão mundial, nós somos o maior campeão do maior campeonato do mundo!</b></p>
     <p><b>Temos os considerados os melhores jogadores de toda a história do futebol, inclusive o nosso falecido Rei Pelé.</b></p>
     <p><b>O Brasil ganhou a Copa do Mundo da FIFA cinco vezes, sendo o maior campeão da história do torneio. Os anos das conquistas são: 1958, 1962, 1970, 1994 e 2002.</b></p>
     
@@ -53,7 +77,7 @@
     <p><b>Seleção de 70. O Brasil enfrentou e ganhou da Itália pelo placar de 4 a 1.</b></p>
     <img src="Seleção-brasileira-3-a-0-Combinado-Irapuato-preparação-Copa-do-Mundo-1970-25.04.1970-Foto-Divulgação-CBF.png" width="700">
 
-    <p><b>Seleção de 94. O Brasil superou a Itália na disposição por pênaltis (3 a 2), após um empate em 0 a 0 no tempo normal e prorrogação.</b></p>
+    <p><b>Seleção de 94. O Brasil superou a Itália na disputa por pênaltis (3 a 2), após um empate em 0 a 0 no tempo normal e prorrogação.</b></p>
     <img src="c_0.jpeg" width="700">
 
     <p><b>Seleção de 2002. O Brasil bateu a Alemanha por 2 a 0, conquistando o pentacampeonato.</b></p>
@@ -61,7 +85,7 @@
 
     <h1><b>Tivemos alguns técnicos durante essa jornada longa e desafiadora, como técnicos inteligentes e muito táticos que levaram nossa nação para a vitória do maior campeonato do mundo!</b></h1>
 
-    <p><b>Vicente Feola 58 - O seu grande destaque e marco à frente da equipe foi a aposta e a insistência na convocação de um jovem Pelé, que tinha apenas 17 anos e viajou para a Suécia lesionado.</b></p>
+    <p><b>Vicente Feola 58 - O seu grande destaque e marco à frente da equipe foi a aposta e a insistence na convocação de um jovem Pelé, que tinha apenas 17 anos e viajou para a Suécia lesionado.</b></p>
     <img src="Vicente_feola_julesrimet.jpg" width="500">
 
     <p><b>Aymoré Moreira 62 - O grande destaque sob a direção dele foi Garrincha, que assumiu o protagonismo absoluto da equipe após Pelé sofrer uma lesão grave logo no segundo jogo do torneio. O "Anjo de Pernas Tortas" brilhou com dribles desconcertantes, gols decisivos e foi eleito o melhor jogador daquela Copa do Mundo.</b></p>
@@ -79,6 +103,7 @@
     Ajuste Tático: Para dar liberdade aos alas (Cafu e Roberto Carlos) e aos craques do meio para frente (como Rivaldo e Ronaldinho Gaúcho), ele implementou um esquema com uma linha de três zagueiros.</b></p>
     <img src="i.jpeg" width="500">
 
+</div>
 </center> 
 </body>
 </html>
