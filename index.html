@@ -13,24 +13,24 @@
         }
 
         body { 
-            /* Fundo com a logo da CBF e o degradê verde/amarelo */
+            /* Mantém o fundo pastel suave e a logo da CBF fixa */
             background-image: 
                 url('https://upload.wikimedia.org/wikipedia/pt/b/b8/Cbf_logo.svg'), 
-                linear-gradient(to bottom, #009c3b, #ffdf00); 
+                linear-gradient(to bottom, #d2f1dd, #fbf3cd); 
             
             background-repeat: no-repeat, no-repeat;
-            background-position: right 20px bottom 20px, center; 
-            background-size: 180px, cover; 
+            background-position: right 30px bottom 30px, center; 
+            background-size: 160px, cover; 
             background-attachment: fixed, fixed; 
             
             font-family: 'Segoe UI', Arial, sans-serif;
-            color: #ffffff;
+            color: #2c3e50;
         }
 
-        /* Container principal protetor do texto para não cobrir a logo */
+        /* CONTAINER CENTRALIZADO E SIMÉTRICO */
         .conteudo-site {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 0 auto; /* O "auto" nas laterais joga o conteúdo exatamente no centro */
             padding: 40px 20px;
             box-sizing: border-box;
         }
@@ -39,80 +39,83 @@
         .intro {
             text-align: center;
             margin-bottom: 50px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
         .intro h1 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
+            color: #1b4d3e;
             margin-bottom: 20px;
         }
 
         .intro p {
             font-size: 1.1rem;
-            max-width: 800px;
-            margin: 10px auto;
+            max-width: 850px;
+            margin: 12px auto;
+            line-height: 1.6;
         }
 
-        /* Títulos das seções horizontais */
+        /* Títulos das seções */
         .secao-titulo {
             text-align: center;
-            font-size: 2rem;
-            margin: 40px 0 20px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-            padding-bottom: 10px;
+            font-size: 1.8rem;
+            color: #1b4d3e;
+            margin: 50px 0 25px 0;
+            border-bottom: 2px solid rgba(27, 77, 62, 0.15);
+            padding-bottom: 12px;
         }
 
-        /* O GRANDE SEGREDO: Alinhamento Horizontal (Grid) */
+        /* GRID SIMÉTRICO (Centraliza os cards que sobrarem na linha) */
         .grid-horizontal {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px; /* Espaço entre os elementos */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centraliza os cards horizontalmente */
+            gap: 25px;
             margin-bottom: 50px;
         }
 
-        /* Estilo profissional para cada Card (Item do Grid) */
+        /* Estilo dos Cards */
         .card {
-            background: rgba(0, 0, 0, 0.4); /* Fundo escuro semi-transparente */
-            border-radius: 12px;
-            padding: 20px;
-            backdrop-filter: blur(5px); /* Efeito de vidro fosco */
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.65);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            
+            /* Define uma largura padrão simétrica para os cards */
+            width: 100%;
+            max-width: 340px; 
+            
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             text-align: center;
-            transition: transform 0.5s ease;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
         }
 
-        /* Efeito visual ao passar o mouse */
+        /* Efeito ao passar o mouse */
         .card:hover {
             transform: translateY(-5px);
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
         }
 
         .card p {
             font-size: 0.95rem;
-            line-height: 1.4;
-            margin-bottom: 15px;
+            line-height: 1.5;
+            margin-bottom: 18px;
+            color: #34495e;
         }
 
-        /* Ajuste das Imagens dentro dos Cards */
+        /* Imagens perfeitamente simétricas dentro dos cards */
         .card img {
             width: 100%;
             height: 200px;
-            object-fit: cover; /* Faz as imagens preencherem o espaço sem distorcer */
-            border-radius: 8px;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-        }
-
-        /* Responsividade para telas grandes: afasta o conteúdo da logo da CBF */
-        @media (min-width: 1300px) {
-            .conteudo-site {
-                padding-right: 220px;
-            }
+            object-fit: cover; 
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
@@ -131,27 +134,27 @@
     <div class="grid-horizontal">
         
         <div class="card">
-            <p><b>Seleção de 58. O Brasil enfrentou e derrotou a seleção da Suécia por 5 a 2.</b></p>
+            <p><b>Seleção de 58.</b> O Brasil enfrentou e derrotou a seleção da Suécia por 5 a 2.</p>
             <img src="brasil58.jpg" alt="Copa 58">
         </div>
 
         <div class="card">
-            <p><b>Seleção de 62. A grande final foi contra a Tchecoslováquia, vencida pelo Brasil por 3 a 1.</b></p>
+            <p><b>Seleção de 62.</b> A grande final foi contra a Tchecoslováquia, vencida pelo Brasil por 3 a 1.</p>
             <img src="unnamed.jpg" alt="Copa 62">
         </div>
 
         <div class="card">
-            <p><b>Seleção de 70. O Brasil enfrentou e ganhou da Itália pelo placar de 4 a 1.</b></p>
+            <p><b>Seleção de 70.</b> O Brasil enfrentou e ganhou da Itália pelo placar de 4 a 1.</p>
             <img src="Seleção-brasileira-3-a-0-Combinado-Irapuato-preparação-Copa-do-Mundo-1970-25.04.1970-Foto-Divulgação-CBF.png" alt="Copa 70">
         </div>
 
         <div class="card">
-            <p><b>Seleção de 94. O Brasil superou a Itália na disputa por pênaltis (3 a 2), após um empate em 0 a 0 no tempo normal e prorrogação.</b></p>
+            <p><b>Seleção de 94.</b> O Brasil superou a Itália na disputa por pênaltis (3 a 2), após um empate em 0 a 0 no tempo normal e prorrogação.</p>
             <img src="c_0.jpeg" alt="Copa 94">
         </div>
 
         <div class="card">
-            <p><b>Seleção de 2002. O Brasil bateu a Alemanha por 2 a 0, conquistando o pentacampeonato.</b></p>
+            <p><b>Seleção de 2002.</b> O Brasil bateu a Alemanha por 2 a 0, conquistando o pentacampeonato.</p>
             <img src="ppix7.170201-674x450.jpg" alt="Copa 2002">
         </div>
 
