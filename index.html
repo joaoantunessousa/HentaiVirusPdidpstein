@@ -15,41 +15,29 @@
         }
 
         body { 
-            /* Cores pastéis e suaves no fundo */
-            background-image: 
-                url('https://upload.wikimedia.org/wikipedia/pt/b/b8/Cbf_logo.svg'), 
-                linear-gradient(135deg, #a3e2b9, #fef1b7); 
-            
-            background-repeat: no-repeat, no-repeat;
-            background-position: right 30px bottom 30px, center; 
-            background-size: 140px, cover; 
-            background-attachment: fixed, fixed; 
+            /* Fundo degradê pastel suave perfeitamente distribuído */
+            background-image: linear-gradient(135deg, #a3e2b9, #fef1b7); 
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-attachment: fixed; 
             
             font-family: 'Poppins', sans-serif;
-            color: #333333; /* Texto escuro para melhor leitura nos tons pastéis */
+            color: #333333;
         }
 
         .conteudo-site {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            margin-right: 220px; 
-        }
-
-        /* Ajuste para telas menores */
-        @media (max-width: 1100px) {
-            .conteudo-site {
-                margin-right: auto; 
-                padding-bottom: 180px;
-            }
+            margin: 0 auto; /* Centraliza o bloco inteiro na tela */
+            padding: 50px 20px;
+            text-align: center; /* Centraliza todos os textos nativamente */
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem; /* Um pouco maior para dar destaque ao topo */
             font-weight: 800;
             text-align: center;
             color: #2c5e3b;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         h2 {
@@ -67,29 +55,31 @@
             color: #555555;
         }
 
-        /* Texto de introdução */
+        /* Texto de introdução perfeitamente centralizado e alinhado */
         .intro-text {
             font-size: 1.1rem;
             line-height: 1.6;
             background: #ffffff;
             padding: 25px;
             border-radius: 12px;
-            margin-bottom: 40px;
+            margin: 0 auto 50px auto;
+            max-width: 800px; 
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             text-align: center;
         }
 
-        /* Container que força os itens a ficarem na horizontal */
+        /* Container flexível centralizado */
         .horizontal-container {
             display: flex;
             flex-direction: row;
+            justify-content: center; /* Centraliza os cards caso a tela seja muito larga */
             gap: 20px;
-            overflow-x: auto; /* Permite rolar para o lado se a tela for pequena */
+            overflow-x: auto; 
             padding: 10px 5px 20px 5px;
             scroll-behavior: smooth;
         }
 
-        /* Customização da barra de rolagem horizontal para ficar discreta */
+        /* Customização da barra de rolagem horizontal */
         .horizontal-container::-webkit-scrollbar {
             height: 8px;
         }
@@ -102,18 +92,19 @@
             border-radius: 10px;
         }
 
-        /* Cards em formato vertical/horizontal alinhados lado a lado */
+        /* Cards simétricos */
         .card {
             background: #ffffff;
             border-radius: 12px;
             padding: 20px;
-            min-width: 300px; /* Largura mínima de cada caixinha */
-            max-width: 320px;
-            flex: 0 0 auto; /* Impede que os cards espremam uns aos outros */
+            min-width: 280px; 
+            max-width: 300px;
+            flex: 0 0 auto; 
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: center; /* Centraliza itens internos do card */
             transition: transform 0.2s;
         }
 
@@ -127,14 +118,15 @@
             margin-top: 0;
             margin-bottom: 15px;
             color: #444444;
+            text-align: center; /* Texto de dentro dos cards centralizados */
         }
 
-        /* Fotos adaptadas para caber dentro dos cards horizontais */
+        /* Imagens padronizadas */
         img {
             border-radius: 8px;
             width: 100%;
             height: 180px;
-            object-fit: cover; /* Corta a imagem proporcionalmente para encaixar no padrão */
+            object-fit: cover; 
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
         }
     </style>
@@ -148,7 +140,7 @@
     <div class="intro-text">
         <p>Sendo o único <b>penta campeão mundial</b>, nós somos o maior vencedor do maior campeonato do mundo!</p>
         <p>Temos os considerados os melhores jogadores de toda a história do futebol, inclusive o nosso eterno Rei Pelé.</p>
-        <p>O Brasil ganhou a Copa do Mundo da FIFA cinco vezes, sendo o maior campeão da história do torneio. Os anos das conquistas são: 1958, 1962, 1970, 1994 e 2002.</p>
+        <p>O Brasil ganhou a Copa do Mundo da FIFAbox cinco vezes, sendo o maior campeão da história do torneio. Os anos das conquistas são: 1958, 1962, 1970, 1994 e 2002.</p>
     </div>
 
     <div class="horizontal-container">
@@ -183,7 +175,7 @@
 
     <div class="horizontal-container">
         <div class="card">
-            <p><b>Vicente Feola (1958)</b> - O seu destaque foi a aposta e a insistência na convocação de um jovem Pelé, que tinha 17 anos e viajou lesionado.</p>
+            <p><b>Vicente Feola (1958)</b> - O seu destaque foi a aposta e a insistence na convocação de um jovem Pelé, que tinha 17 anos e viajou lesionado.</p>
             <img src="Vicente_feola_julesrimet.jpg" alt="Vicente Feola">
         </div>
 
