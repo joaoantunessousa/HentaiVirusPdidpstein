@@ -68,21 +68,15 @@
             text-align: center;
         }
 
-        /* Container flexível centralizado com rolagem perfeita */
+        /* Container flexível centralizado */
         .horizontal-container {
             display: flex;
             flex-direction: row;
+            justify-content: center; /* Centraliza os cards caso a tela seja muito larga */
             gap: 20px;
             overflow-x: auto; 
+            padding: 10px 5px 20px 5px;
             scroll-behavior: smooth;
-            
-            /* Ajustes para centralizar a barra de rolagem e limitar o alongamento */
-            width: 100%;
-            max-width: 940px;        /* Define a largura máxima da barra de rolagem na tela */
-            margin: 0 auto;          /* Centraliza o container e o scroll perfeitamente no meio */
-            padding: 10px 20px 20px 20px; /* Margem interna para não cortar o primeiro e o último card */
-            box-sizing: border-box;  /* Garante que o padding não quebre o layout */
-            flex-wrap: nowrap;       /* Força os cards a ficarem na mesma linha */
         }
 
         /* Customização da barra de rolagem horizontal */
@@ -177,7 +171,7 @@
     </div>
 
     <h2>Os Comandantes do Penta</h2>
-    <p class="subtitulo-texto">Tivemos uma jornada longa e desafiadora, liderada por técnicos inteligentes e táticos que guiaram nossa nation rumo à vitória!</p>
+    <p class="subtitulo-texto">Tivemos uma jornada longa e desafiadora, liderada por técnicos inteligentes e táticos que guiaram nossa nação rumo à vitória!</p>
 
     <div class="horizontal-container">
         <div class="card">
