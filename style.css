@@ -79,7 +79,8 @@ body {
             justify-content: center; /* Centraliza os cards caso a tela seja muito larga */
             gap: 20px;
             overflow-x: auto; 
-            padding: 10px 5px 20px 5px;
+            padding: 10px 20px 20px 20px;
+            scroll-padding: 0 20px;
             scroll-behavior: smooth;
         }
 
@@ -139,7 +140,7 @@ body {
         }
 
 
-        
+
         /* Imagens padronizadas */
         img {
             border-radius: 8px;
