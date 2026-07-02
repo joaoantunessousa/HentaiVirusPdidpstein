@@ -74,7 +74,7 @@ text-align: center;
 .horizontal-container {
 display: flex;
 flex-direction: row;
-justify-content: center; /* Centraliza os cards caso a tela seja muito larga */
+justify-content: flex-start;
 gap: 20px;
 overflow-x: auto; 
 padding: 10px 20px 20px 20px;
