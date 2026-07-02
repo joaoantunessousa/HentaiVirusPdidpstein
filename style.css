@@ -70,17 +70,31 @@ text-align: center;
 
 
 
-/* Container flexível centralizado */
+
+
+/* Seu container atualizado */
 .horizontal-container {
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
-gap: 20px;
-overflow-x: auto; 
-padding: 10px 20px 20px 20px;
-scroll-padding: 0 20px;
-scroll-behavior: smooth;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Centraliza os cards */
+  gap: 20px;
+  overflow-x: auto; 
+  padding: 10px 20px 20px 20px;
+  scroll-behavior: smooth;
+  
+  /* Removemos o scroll-padding e deixamos o flex cuidar do espaço */
 }
+
+/* TRUQUE: Adiciona um espaço invisível antes do primeiro card */
+.card:first-child {
+  margin-left: auto;
+}
+
+/* TRUQUE: Adiciona um espaço invisível depois do último card */
+.card:last-child {
+  margin-right: auto;
+}
+
 
 
 
