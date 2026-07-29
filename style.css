@@ -72,7 +72,7 @@ text-align: center;
 
 
 
-/* Seu container atualizado */
+/* container atualizado */
 .horizontal-container {
   display: flex;
   flex-direction: row;
@@ -82,7 +82,7 @@ text-align: center;
   padding: 10px 20px 20px 20px;
   scroll-behavior: smooth;
   
-  /* Removemos o scroll-padding e deixamos o flex cuidar do espaço */
+  /* Removemos o scroll-padding e deixa o flex cuidar do espaço */
 }
 
 /* TRUQUE: Adiciona um espaço invisível antes do primeiro card */
