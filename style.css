@@ -109,7 +109,7 @@ height: 8px;
 
 .horizontal-container::-webkit-scrollbar-track {
 background: rgba(0,0,0,0.05);
-border-radius: 20px;
+border-radius: 0px;
 }
 
 
