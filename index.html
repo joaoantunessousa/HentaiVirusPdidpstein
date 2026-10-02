@@ -3,648 +3,493 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Girls Power Academia | Sua força, sua confiança, seu lugar.</title>
-    <!-- Fontes do Google: Montserrat e Playfair Display -->
+    <title>GIRLS POWER | Academia Exclusiva</title>
+    <!-- Fontes Google: Montserrat e Syne para visual corporativo/fitness moderno -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;1,400&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navegação Fixa -->
-    <header class="navbar-header">
-        <div class="nav-container">
-            <a href="#inicio" class="nav-logo">
-                GIRLS <span>POWER</span>
+    <!-- Header / Navegação -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#inicio" class="brand-logo">
+                GIRLS<span>POWER</span>
             </a>
-            <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
-            <nav class="nav-menu" id="nav-menu">
+
+            <nav class="main-nav" id="main-nav">
                 <ul>
-                    <li><a href="#inicio" class="nav-link">Início</a></li>
-                    <li><a href="#quem-somos" class="nav-link">Quem Somos</a></li>
-                    <li><a href="#publico" class="nav-link">Público</a></li>
-                    <li><a href="#identidade" class="nav-link">Identidade</a></li>
-                    <li><a href="#logotipo" class="nav-link">Logotipo</a></li>
-                    <li><a href="#marketing" class="nav-link">Marketing</a></li>
-                    <li><a href="#estrutura" class="nav-link">Estrutura</a></li>
-                    <li><a href="#custos" class="nav-link">Custos</a></li>
-                    <li><a href="#pib" class="nav-link">PIB</a></li>
-                    <li><a href="#conclusao" class="nav-link">Conclusão</a></li>
+                    <li><a href="#inicio">INÍCIO</a></li>
+                    <li><a href="#conceito">SOBRE</a></li>
+                    <li><a href="#publico">PÚBLICO</a></li>
+                    <li><a href="#identidade">IDENTIDADE</a></li>
+                    <li><a href="#plano-acao">PLANO DE AÇÃO</a></li>
+                    <li><a href="#estrutura">ESTRUTURA</a></li>
+                    <li><a href="#gestao">GESTÃO & CUSTOS</a></li>
+                    <li><a href="#pib">IMPACTO PIB</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero / Início -->
-    <section id="inicio" class="hero-section">
-        <div class="glow-sphere glow-1"></div>
-        <div class="glow-sphere glow-2"></div>
-        <div class="container hero-container">
-            <div class="hero-text">
-                <span class="badge-sub">ACADEMIA EXCLUSIVA</span>
-                <h1 class="hero-title">GIRLS <span>POWER</span></h1>
-                <p class="hero-slogan">"SUA FORÇA, SUA CONFIANÇA, SEU LUGAR."</p>
-                <div class="hero-actions">
-                    <a href="#quem-somos" class="btn btn-primary">CONHEÇA A GIRLS POWER</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="circle-frame">
-                    <svg class="svg-silhueta" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="100" cy="100" r="85" fill="none" stroke="#FF66C4" stroke-width="2" stroke-dasharray="10, 5" />
-                        <path d="M100 30 C110 30 115 40 115 50 C115 60 105 65 100 65 C95 65 85 60 85 50 C85 40 90 30 100 30 Z M80 80 L120 80 L130 130 L115 130 L110 100 L100 120 L90 100 L85 130 L70 130 Z" fill="#FF66C4" opacity="0.8"/>
-                    </svg>
-                </div>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-viewport">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-wrapper">
+            <span class="category-tag">ACADEMIA EXCLUSIVA FEMININA</span>
+            <h1 class="hero-heading">SUA FORÇA.<br>SUA CONFIANÇA.<br><span class="accent-text">SEU LUGAR.</span></h1>
+            <p class="hero-lead">Um centro de treinamento de alta performance e bem-estar projetado exclusivamente para o público feminino.</p>
+            <div class="hero-buttons">
+                <a href="#conceito" class="btn btn-solid">CONHECER O CONCEITO</a>
+                <a href="#estrutura" class="btn btn-outline">ESTRUTURA</a>
             </div>
         </div>
     </section>
 
-    <!-- Identificação do Trabalho -->
-    <section class="trabalho-info-section">
-        <div class="container">
-            <div class="info-card-minimal">
-                <div class="info-group">
-                    <span class="label">PROJETO ESCOLAR</span>
-                    <h3>Girls Power</h3>
-                </div>
-                <div class="info-group">
-                    <span class="label">INTEGRANTES</span>
-                    <p>Ana Laura | Isabela Loyola | Isadora Gaier | João Miguel | Julia Teixeira</p>
-                </div>
-                <div class="info-group">
-                    <span class="label">TURMA & ORIENTADOR</span>
-                    <p>1º T — Douglas Rosa</p>
-                </div>
+    <!-- Ficha Técnica do Projeto -->
+    <div class="project-meta-bar">
+        <div class="meta-container">
+            <div class="meta-item">
+                <span class="meta-label">PROJETO ESCOLAR</span>
+                <span class="meta-val">Girls Power Gym</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">TURMA & ORIENTADOR</span>
+                <span class="meta-val">1º T — Prof. Douglas Rosa</span>
+            </div>
+            <div class="meta-item meta-wide">
+                <span class="meta-label">INTEGRANTES</span>
+                <span class="meta-val">Ana Laura | Isabela Loyola | Isadora Gaier | João Miguel | Julia Teixeira</span>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Quem Somos -->
-    <section id="quem-somos" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>QUEM NÓS SOMOS?</h2>
-                <p class="main-desc">"A Girls Powers Gym é uma academia exclusiva para mulheres e meninas a partir dos 12 anos."</p>
-            </div>
-            <div class="cards-grid">
-                <div class="card-item">
-                    <div class="icon-box">🛡️</div>
-                    <h3>AMBIENTE SEGURO</h3>
-                    <p>Espaço acolhedor onde você se sente segura e à vontade.</p>
+    <!-- Conceito / Quem Somos -->
+    <section id="conceito" class="section-block">
+        <div class="section-container">
+            <div class="grid-2col align-center">
+                <div class="text-side">
+                    <span class="section-subtitle">PROPOSITO & MISSÃO</span>
+                    <h2 class="section-title">O QUE É A GIRLS POWER?</h2>
+                    <p class="paragraph-text">
+                        A <strong>Girls Power Gym</strong> é uma academia exclusiva para mulheres e meninas a partir dos 12 anos. Desenvolvida para proporcionar um ambiente seguro, motivador e livre de julgamentos, focado na prática de exercícios com acompanhamento especializado.
+                    </p>
+                    <p class="paragraph-text">
+                        Nosso objetivo é desenvolver força física, autoestima e bem-estar, respeitando os limites e metas individuais de cada aluna.
+                    </p>
                 </div>
-                <div class="card-item">
-                    <div class="icon-box">🏋️‍♀️</div>
-                    <h3>PRÁTICA DE EXERCÍCIOS</h3>
-                    <p>Treinos para todos os níveis, com acompanhamento.</p>
-                </div>
-                <div class="card-item">
-                    <div class="icon-box">✨</div>
-                    <h3>FORÇA E CONFIANÇA</h3>
-                    <p>Desenvolvemos sua força física e autoestima todos os dias.</p>
-                </div>
-                <div class="card-item">
-                    <div class="icon-box">🌿</div>
-                    <h3>BEM-ESTAR</h3>
-                    <p>Cuidamos do seu corpo e da sua mente.</p>
-                </div>
-                <div class="card-item card-full-width">
-                    <div class="icon-box">🎯</div>
-                    <h3>SEUS OBJETIVOS</h3>
-                    <p>Incentivamos, respeitamos e motivamos você a ir mais longe!</p>
+                <div class="cards-stack">
+                    <div class="feature-box">
+                        <div class="feature-num">01</div>
+                        <div>
+                            <h4>Ambiente Seguro</h4>
+                            <p>Espaço 100% projetado para a privacidade e conforto feminino.</p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-num">02</div>
+                        <div>
+                            <h4>Treino Personalizado</h4>
+                            <p>Programas adaptados para diferentes idades e objetivos.</p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-num">03</div>
+                        <div>
+                            <h4>Espaço Kids</h4>
+                            <p>Brinquedoteca com monitoria para mães treinarem com tranquilidade.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Público-Alvo -->
-    <section id="publico" class="section-padding bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2>PÚBLICO-ALVO</h2>
+    <section id="publico" class="section-block bg-darker">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-subtitle">FOCO ESTRATÉGICO</span>
+                <h2 class="section-title">PÚBLICO-ALVO</h2>
             </div>
-            <div class="publico-grid">
-                <div class="publico-card">
-                    <div class="badge-num">01</div>
-                    <p>Mulheres e meninas a partir de 12 anos</p>
+            <div class="grid-3col">
+                <div class="stat-card">
+                    <div class="stat-header">12+</div>
+                    <h3>Mulheres e Meninas</h3>
+                    <p>A partir dos 12 anos de idade, buscando saúde, condicionamento ou alto rendimento.</p>
                 </div>
-                <div class="publico-card">
-                    <div class="badge-num">02</div>
-                    <p>Moradoras de Curitiba e região metropolitana</p>
+                <div class="stat-card">
+                    <div class="stat-header">CTBA</div>
+                    <h3>Curitiba e Região</h3>
+                    <p>Localização estratégica de fácil acesso para moradoras da região metropolitana.</p>
                 </div>
-                <div class="publico-card">
-                    <div class="badge-num">03</div>
-                    <p>Mães, devido à nossa brinquedoteca para as crianças com monitoria.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Paleta de Cores e Identidade -->
-    <section id="identidade" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>PALETA DE CORES & IDENTIDADE</h2>
-            </div>
-            <div class="colors-grid">
-                <div class="color-box">
-                    <div class="color-sample pink-sample"></div>
-                    <div class="color-info">
-                        <h3>ROSA PINK</h3>
-                        <code>#FF66C4</code>
-                        <p>Transmite afeto, delicadeza e feminilidade.</p>
-                    </div>
-                </div>
-                <div class="color-box">
-                    <div class="color-sample black-sample"></div>
-                    <div class="color-info">
-                        <h3>PRETO</h3>
-                        <code>#000000</code>
-                        <p>Transmite elegância, poder e determinação.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="identidade-objetivos">
-                <h3>OBJETIVOS DA IDENTIDADE VISUAL</h3>
-                <div class="cards-2x2">
-                    <div class="card-item">
-                        <h4>IDENTIDADE VISUAL</h4>
-                        <p>Criar uma identidade visual padronizada e reconhecível.</p>
-                    </div>
-                    <div class="card-item">
-                        <h4>FORTALECE A MARCA</h4>
-                        <p>Fortalece a marca e gera conexão com o público.</p>
-                    </div>
-                    <div class="card-item">
-                        <h4>TRANSMITE VALORES</h4>
-                        <p>Transmite seus valores: força, confiança, energia e feminilidade.</p>
-                    </div>
-                    <div class="card-item">
-                        <h4>EXPERIÊNCIA ÚNICA</h4>
-                        <p>Proporciona uma experiência acolhedora, moderna e inspiradora.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Círculo Cromático Representativo -->
-            <div class="circulo-cromatico-wrapper">
-                <h3>CONCEITO CROMÁTICO</h3>
-                <div class="circulo-cromatico">
-                    <div class="fat-pink"></div>
-                    <div class="fat-black"></div>
-                    <div class="center-label">GIRLS POWER</div>
+                <div class="stat-card">
+                    <div class="stat-header">MÃES</div>
+                    <h3>Suporte Familiar</h3>
+                    <p>Mães que necessitam de estrutura acolhedora e espaço kids com monitores qualificados.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tríade: Força, Confiança, Lugar -->
-    <section class="section-padding bg-alt">
-        <div class="container">
-            <div class="triade-grid">
-                <div class="triade-card">
-                    <div class="triade-num">1</div>
-                    <h3>SUA FORÇA</h3>
-                    <p>Desenvolver o corpo e a mente para superar limites e conquistar mais saúde e bem-estar.</p>
+    <!-- Identidade Visual & Cores -->
+    <section id="identidade" class="section-block">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-subtitle">BRANDING</span>
+                <h2 class="section-title">IDENTIDADE VISUAL</h2>
+            </div>
+
+            <div class="grid-2col color-showcase">
+                <div class="color-card pink-card">
+                    <div class="color-badge">ROSA PINK #FF66C4</div>
+                    <h3>AFETO & FEMINILIDADE</h3>
+                    <p>Representa a energia, acolhimento e a presença marcante do público feminino.</p>
                 </div>
-                <div class="triade-card">
-                    <div class="triade-num">2</div>
-                    <h3>SUA CONFIANÇA</h3>
-                    <p>Fortalecer a autoestima e valorizar cada conquista, todos os dias.</p>
+                <div class="color-card black-card">
+                    <div class="color-badge">PRETO #000000</div>
+                    <h3>PODER & ELEGÂNCIA</h3>
+                    <p>Transmite sofisticação, seriedade, força e determinação de alta performance.</p>
                 </div>
-                <div class="triade-card">
-                    <div class="triade-num">3</div>
-                    <h3>SEU LUGAR</h3>
-                    <p>Um ambiente acolhedor, seguro e feito para todas se sentirem...</p>
+            </div>
+
+            <div class="grid-4col margin-top-lg">
+                <div class="mini-card">
+                    <h4>Padronização</h4>
+                    <p>Identidade visual sólida e de fácil reconhecimento.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>Conexão</h4>
+                    <p>Fortalecimento de marca e engajamento com a comunidade.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>Valores</h4>
+                    <p>Transmissão de força, confiança e autenticidade.</p>
+                </div>
+                <div class="mini-card">
+                    <h4>Experiência</h4>
+                    <p>Ambiente moderno, inspirador e altamente funcional.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Logotipo & Aplicações -->
-    <section id="logotipo" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>LOGOTIPO</h2>
-            </div>
-            <div class="logo-display-box">
-                <div class="logo-preview">
-                    <span class="logo-text-main">GIRLS <span>POWER</span></span>
-                    <span class="logo-sub-main">ACADEMIA</span>
+    <section class="section-block bg-darker">
+        <div class="section-container">
+            <div class="grid-2col align-center">
+                <div class="brand-display-box">
+                    <div class="display-logo">GIRLS<span>POWER</span></div>
+                    <span class="display-sub">ACADEMIA EXCLUSIVA</span>
                 </div>
-                <div class="logo-points">
-                    <div class="point-item"><strong>REPRESENTA:</strong> força, confiança e o bem estar feminino.</div>
-                    <div class="point-item"><strong>TRANSMITE:</strong> identidade da marca de forma clara e marcante.</div>
-                    <div class="point-item"><strong>REFORÇA:</strong> o conceito de um ambiente acolhedor e exclusivo.</div>
-                    <div class="point-item"><strong>CONECTA:</strong> com mulheres que buscam evolução e qualidade de vida.</div>
-                </div>
-            </div>
-
-            <!-- Aplicações do Logo -->
-            <div class="aplicacoes-wrapper">
-                <h3>APLICAÇÕES DA MARCA</h3>
-                <div class="mockups-grid">
-                    <div class="mockup-card">
-                        <div class="mockup-icon">🍾</div>
-                        <h4>GARRAFA PRETA</h4>
-                    </div>
-                    <div class="mockup-card">
-                        <div class="mockup-icon">👕</div>
-                        <h4>CAMISETA PRETA</h4>
-                    </div>
-                    <div class="mockup-card">
-                        <div class="mockup-icon">👔</div>
-                        <h4>CAMISETA DE PROFESSORA</h4>
-                    </div>
-                    <div class="mockup-card">
-                        <div class="mockup-icon">🛍️</div>
-                        <h4>ECOBAG</h4>
-                    </div>
+                <div>
+                    <span class="section-subtitle">APLICAÇÕES DE MARCA</span>
+                    <h2 class="section-title">PRODUTOS OFICIAIS</h2>
+                    <ul class="check-list">
+                        <li><strong>Garrafa Térmica Oficial:</strong> Acabamento preto fosco com gravação rosa pink.</li>
+                        <li><strong>Vestuário Técnico:</strong> Camisetas operacionais e linhas para alunas.</li>
+                        <li><strong>Uniforme de Staff:</strong> Identificação clara para professoras e recepcionistas.</li>
+                        <li><strong>Acessórios:</strong> Ecobags e itens promocionais para programas de fidelidade.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Roleta de Brindes -->
-    <section class="section-padding bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2>ROLETA DE BRINDES</h2>
-                <p>Interação promocional da marca</p>
-            </div>
-            <div class="roleta-wrapper">
-                <div class="roleta-container">
-                    <div class="roleta-pointer">▼</div>
-                    <div class="roleta-wheel" id="wheel">
-                        <div class="slice" style="--i:1; --cls:#000000;"><span>PASSOU A VEZ</span></div>
-                        <div class="slice" style="--i:2; --cls:#FF66C4;"><span>10% OFF MENSALIDADE</span></div>
-                        <div class="slice" style="--i:3; --cls:#000000;"><span>GANHOU ECOBAG</span></div>
-                        <div class="slice" style="--i:4; --cls:#FF66C4;"><span>GARRAFA TÉRMICA</span></div>
-                        <div class="slice" style="--i:5; --cls:#000000;"><span>FAÇA 1 FLEXÃO</span></div>
-                        <div class="slice" style="--i:6; --cls:#FF66C4;"><span>5 AGACHAMENTOS</span></div>
-                        <div class="slice" style="--i:7; --cls:#000000;"><span>1 NUTRICIONISTA GRÁTIS</span></div>
-                    </div>
+    <!-- Interatividade: Roleta de Prêmios -->
+    <section class="section-block">
+        <div class="section-container text-center">
+            <span class="section-subtitle">INTERAÇÃO</span>
+            <h2 class="section-title">ROLETA DE BRINDES</h2>
+            <p class="paragraph-text center-max">Ação promocional estratégica para captação e engajamento de novas alunas.</p>
+            
+            <div class="interactive-wheel-area">
+                <div class="wheel-pointer"></div>
+                <div class="wheel-disc" id="wheel-disc">
+                    <div class="wheel-segment" style="--deg: 0deg;"><span>PASSOU A VEZ</span></div>
+                    <div class="wheel-segment" style="--deg: 51.4deg;"><span>10% OFF</span></div>
+                    <div class="wheel-segment" style="--deg: 102.8deg;"><span>ECOBAG</span></div>
+                    <div class="wheel-segment" style="--deg: 154.2deg;"><span>GARRAFA</span></div>
+                    <div class="wheel-segment" style="--deg: 205.6deg;"><span>1 FLEXÃO</span></div>
+                    <div class="wheel-segment" style="--deg: 257deg;"><span>5 AGACHAMENTOS</span></div>
+                    <div class="wheel-segment" style="--deg: 308.4deg;"><span>NUTRI GRÁTIS</span></div>
                 </div>
-                <button class="btn btn-primary btn-spin" id="spin-btn">GIRAR ROLETA</button>
+                <button class="btn btn-solid margin-top-md" id="spin-trigger">GIRAR ROLETA</button>
             </div>
         </div>
     </section>
 
-    <!-- Modal do Resultado da Roleta -->
-    <div class="modal-overlay" id="result-modal">
-        <div class="modal-content">
-            <h3>RESULTADO DA ROLETA</h3>
-            <p id="modal-result-text"></p>
-            <button class="btn btn-primary" id="close-modal">FECHAR</button>
+    <!-- Modal de Resultado -->
+    <div class="custom-modal" id="result-modal">
+        <div class="modal-card">
+            <span class="modal-tag">RESULTADO</span>
+            <h3 id="modal-outcome">---</h3>
+            <button class="btn btn-outline" id="modal-close">FECHAR</button>
         </div>
     </div>
 
-    <!-- 5W2H -->
-    <section id="marketing" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>5W2H — PLANO DE AÇÃO</h2>
+    <!-- Marketing 5W2H & 4Ps -->
+    <section id="plano-acao" class="section-block bg-darker">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-subtitle">ESTRATÉGIA DE MERCADO</span>
+                <h2 class="section-title">PLANO DE AÇÃO & 4Ps</h2>
             </div>
-            <div class="grid-5w2h">
-                <div class="item-5w2h">
-                    <span class="tag-5w2h">WHAT / O QUÊ?</span>
-                    <p>Academia exclusiva para mulheres.</p>
-                </div>
-                <div class="item-5w2h">
-                    <span class="tag-5w2h">WHY / POR QUÊ?</span>
-                    <p>Promover saúde, força, confiança e bem-estar.</p>
-                </div>
-                <div class="item-5w2h">
-                    <span class="tag-5w2h">WHO / QUEM?</span>
-                    <p>Equipe qualificada: administração, professores, nutricionista e mais.</p>
-                </div>
-                <div class="item-5w2h">
-                    <span class="tag-5w2h">WHERE / ONDE?</span>
-                    <p>Local de fácil acesso, pensado para mulheres.</p>
-                </div>
-                <div class="item-5w2h">
-                    <span class="tag-5w2h">WHEN / QUANDO?</span>
-                    <p>Na fase de implantação e inauguração.</p>
-                </div>
-                <div class="item-5w2h">
-                    <span class="tag-5w2h">HOW / COMO?</span>
-                    <p>Treinos, aulas, nutrição, mensalidades e espaço kids.</p>
-                </div>
-                <div class="item-5w2h item-highlight">
-                    <span class="tag-5w2h">HOW MUCH / QUANTO?</span>
-                    <p class="price-tag">Investimento de R$ 550.000,00</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 4Ps do Marketing & Comunicação -->
-    <section class="section-padding bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2>4 Ps DO MARKETING</h2>
-            </div>
-            <div class="ps-grid">
-                <div class="p-card">
-                    <h3>PRODUTO</h3>
-                    <p>Academia exclusiva para mulheres, com musculação, aulas coletivas e acompanhamento profissional.</p>
+            <!-- 5W2H -->
+            <div class="grid-3col">
+                <div class="info-tile">
+                    <span class="tile-tag">WHAT / O QUE</span>
+                    <p>Academia exclusiva para o público feminino.</p>
                 </div>
-                <div class="p-card">
-                    <h3>PREÇO</h3>
-                    <p>Mensalidade média de R$ 200, com planos acessíveis e flexíveis.</p>
+                <div class="info-tile">
+                    <span class="tile-tag">WHY / POR QUE</span>
+                    <p>Promover saúde, autonomia e bem-estar em um espaço seguro.</p>
                 </div>
-                <div class="p-card">
-                    <h3>PRAÇA</h3>
-                    <p>Localizada na região metropolitana de Curitiba.</p>
+                <div class="info-tile">
+                    <span class="tile-tag">WHO / QUEM</span>
+                    <p>Equipe multidisciplinar qualificada e diretoria.</p>
                 </div>
-                <div class="p-card">
-                    <h3>PROMOÇÃO</h3>
-                    <p>Divulgação nas redes sociais, promoções e programa de indicação de alunas.</p>
+                <div class="info-tile">
+                    <span class="tile-tag">WHERE / ONDE</span>
+                    <p>Ponto comercial de alto fluxo na Grande Curitiba.</p>
+                </div>
+                <div class="info-tile">
+                    <span class="tile-tag">WHEN / QUANDO</span>
+                    <p>Cronograma planejado para a fase de implantação.</p>
+                </div>
+                <div class="info-tile">
+                    <span class="tile-tag">HOW / COMO</span>
+                    <p>Aulas coletivas, musculação, nutrição e espaço kids.</p>
                 </div>
             </div>
 
-            <div class="comunicacao-wrapper">
-                <h3>COMUNICAÇÃO E DIVULGAÇÃO</h3>
-                <p class="comunicacao-sub">"A Girls Power se comunica de forma estratégica e inspiradora para conectar, engajar e transformar."</p>
-                <div class="comunicacao-grid">
-                    <div class="com-item">
-                        <span class="com-icon">📱</span>
-                        <h4>REDES SOCIAIS</h4>
-                        <p>Instagram, TikTok e WhatsApp.</p>
-                    </div>
-                    <div class="com-item">
-                        <span class="com-icon">💡</span>
-                        <h4>CONTEÚDO</h4>
-                        <p>treinos, dicas, motivação e histórias reais.</p>
-                    </div>
-                    <div class="com-item">
-                        <span class="com-icon">🎁</span>
-                        <h4>PROMOÇÕES</h4>
-                        <p>parcerias, indicações e benefícios exclusivos.</p>
-                    </div>
-                    <div class="com-item">
-                        <span class="com-icon">⭐</span>
-                        <h4>EVENTOS</h4>
-                        <p>ações especiais para atrair e fidelizar alunas.</p>
-                    </div>
+            <div class="investment-banner margin-top-md">
+                <span>INVESTIMENTO INICIAL TOTAL (HOW MUCH)</span>
+                <h2>R$ 550.000,00</h2>
+            </div>
+
+            <!-- 4Ps -->
+            <div class="grid-4col margin-top-lg">
+                <div class="p-box">
+                    <h4>PRODUTO</h4>
+                    <p>Treinamento personalizado, musculação, aulas em grupo e consultoria nutricional.</p>
+                </div>
+                <div class="p-box">
+                    <h4>PREÇO</h4>
+                    <p>Mensalidade média de R$ 200,00 com planos trimestrais e anuais.</p>
+                </div>
+                <div class="p-box">
+                    <h4>PRAÇA</h4>
+                    <p>Unidade física estruturada na região metropolitana de Curitiba.</p>
+                </div>
+                <div class="p-box">
+                    <h4>PROMOÇÃO</h4>
+                    <p>Redes sociais (Instagram, TikTok), campanhas digitais e plano de indicação.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Estrutura Empresarial & Organograma -->
-    <section id="estrutura" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>ESTRUTURA EMPRESARIAL</h2>
-                <p class="main-desc">"A Academia Girls Power adota uma organização funcional, com setores especializados que atuam de forma integrada para garantir eficiência, qualidade no atendimento e foco nas alunas."</p>
+    <section id="estrutura" class="section-block">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-subtitle">ORGANIZAÇÃO</span>
+                <h2 class="section-title">ESTRUTURA EMPRESARIAL</h2>
+                <p class="paragraph-text center-max">Modelo corporativo sob Sociedade Limitada (LTDA.), com gestão funcional focada na eficiência operacional.</p>
             </div>
 
-            <div class="estrutura-info-grid">
-                <div class="est-card">
-                    <h4>RAMO</h4>
-                    <p>Prestação de serviços exclusivos para mulheres.</p>
-                </div>
-                <div class="est-card">
-                    <h4>MODELO</h4>
-                    <p>Sociedade Limitada (LTDA.)</p>
-                </div>
-                <div class="est-card">
-                    <h4>EQUIPE</h4>
-                    <p>Direção, administração, recepção, professoras e manutenção.</p>
-                </div>
-            </div>
-
-            <div class="organograma-wrapper">
-                <h3>ORGANOGRAMA</h3>
-                <div class="organograma-tree">
-                    <div class="node node-root">PROPRIETÁRIA / DIRETORA</div>
-                    <div class="arrow-v">↓</div>
-                    <div class="node node-sub">GERENTE</div>
-                    <div class="arrow-v">↓</div>
-                    <div class="tree-branches">
-                        <div class="branch">
-                            <div class="branch-title">ADMINISTRATIVO</div>
-                            <div class="arrow-v">↓</div>
-                            <div class="node">RECEPÇÃO</div>
-                            <div class="arrow-v">↓</div>
-                            <div class="node node-leaf">ATENDIMENTO ÀS ALUNAS</div>
-                        </div>
-                        <div class="branch">
-                            <div class="branch-title">TÉCNICO</div>
-                            <div class="arrow-v">↓</div>
-                            <div class="node">COORDENADORA TÉCNICA</div>
-                            <div class="arrow-v">↓</div>
-                            <div class="node node-leaf">PROFESSORAS E PERSONAL TRAINERS</div>
-                        </div>
-                        <div class="branch">
-                            <div class="branch-title">APOIO</div>
-                            <div class="arrow-v">↓</div>
-                            <div class="node node-leaf">LIMPEZA E MANUTENÇÃO</div>
-                        </div>
+            <div class="organogram-container">
+                <div class="org-node root-node">PROPRIETÁRIA / DIRETORIA</div>
+                <div class="org-line-v"></div>
+                <div class="org-node sub-node">GERÊNCIA GERAL</div>
+                <div class="org-line-v"></div>
+                <div class="org-branches">
+                    <div class="org-branch">
+                        <div class="branch-tag">ADMINISTRATIVO</div>
+                        <div class="org-node">Recepção / Vendas</div>
+                    </div>
+                    <div class="org-branch">
+                        <div class="branch-tag">TÉCNICO</div>
+                        <div class="org-node">Coordenação Técnica</div>
+                        <div class="org-line-v"></div>
+                        <div class="org-node">Professoras & Personal Trainers</div>
+                    </div>
+                    <div class="org-branch">
+                        <div class="branch-tag">OPERACIONAL</div>
+                        <div class="org-node">Manutenção & Limpeza</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Custos -->
-    <section id="custos" class="section-padding bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <h2>ESTRUTURA DE CUSTOS</h2>
+    <!-- Gestão de Custos -->
+    <section id="gestao" class="section-block bg-darker">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-subtitle">FINANÇAS</span>
+                <h2 class="section-title">ESTRUTURA DE CUSTOS</h2>
             </div>
-            
-            <div class="custos-layout">
-                <div class="custos-chart-container">
-                    <svg class="donut-chart" viewBox="0 0 42 42">
-                        <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#000000"></circle>
-                        <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#222" stroke-width="5"></circle>
-                        <!-- Segmentos interativos -->
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FF66C4" stroke-width="5" stroke-dasharray="26 74" stroke-dashoffset="25"></circle>
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#D843A3" stroke-width="5" stroke-dasharray="19 81" stroke-dashoffset="99"></circle>
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#A8287B" stroke-width="5" stroke-dasharray="21 79" stroke-dashoffset="80"></circle>
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#781054" stroke-width="5" stroke-dasharray="18 82" stroke-dashoffset="59"></circle>
-                        <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FF99DC" stroke-width="5" stroke-dasharray="16 84" stroke-dashoffset="41"></circle>
-                    </svg>
-                    <div class="chart-center-text">
-                        <span>ESTRUTURA</span>
-                        <strong>100%</strong>
-                    </div>
+
+            <div class="grid-2col align-center">
+                <div class="cost-summary-box">
+                    <h3>DISTRIBUIÇÃO ORÇAMENTÁRIA</h3>
+                    <p class="paragraph-text">Mapeamento rigoroso dos custos operacionais para sustentabilidade financeira e margem de segurança.</p>
+                    <div class="total-badge">100% ALOCADO</div>
                 </div>
 
-                <div class="custos-legend-grid">
-                    <div class="legend-group">
-                        <h4 class="grp-title">CUSTO FIXO</h4>
-                        <ul>
-                            <li><span>Salários</span> <strong>6%</strong></li>
-                            <li><span>Segurança</span> <strong>8%</strong></li>
-                            <li><span>Internet e sistemas</span> <strong>7%</strong></li>
-                            <li><span>Contabilidade</span> <strong>5%</strong></li>
-                        </ul>
+                <div class="cost-list">
+                    <div class="cost-item">
+                        <span class="cost-name">Custos Fixos (Salários, Segurança, Sistemas, Contabilidade)</span>
+                        <span class="cost-val">26%</span>
                     </div>
-
-                    <div class="legend-group">
-                        <h4 class="grp-title">CUSTO VARIÁVEL</h4>
-                        <ul>
-                            <li><span>Água e energia</span> <strong>6%</strong></li>
-                            <li><span>Materiais de limpeza</span> <strong>4%</strong></li>
-                            <li><span>Materiais de consumo</span> <strong>3%</strong></li>
-                            <li><span>Manutenção dos equipamentos</span> <strong>6%</strong></li>
-                        </ul>
+                    <div class="cost-item">
+                        <span class="cost-name">Custos Variáveis (Água, Energia, Consumo, Manutenção)</span>
+                        <span class="cost-val">19%</span>
                     </div>
-
-                    <div class="legend-group">
-                        <h4 class="grp-title">CUSTO INDIRETO</h4>
-                        <ul>
-                            <li><span>Marketing</span> <strong>5%</strong></li>
-                            <li><span>Administração</span> <strong>3%</strong></li>
-                            <li><span>Limpeza</span> <strong>7%</strong></li>
-                            <li><span>Manutenção geral</span> <strong>6%</strong></li>
-                        </ul>
+                    <div class="cost-item">
+                        <span class="cost-name">Custos Indiretos (Marketing, Limpeza, Adm, Serviços)</span>
+                        <span class="cost-val">21%</span>
                     </div>
-
-                    <div class="legend-group">
-                        <h4 class="grp-title">CUSTO DIRETO</h4>
-                        <ul>
-                            <li><span>Material das aulas</span> <strong>10%</strong></li>
-                            <li><span>Equipamentos de treino</span> <strong>8%</strong></li>
-                        </ul>
+                    <div class="cost-item">
+                        <span class="cost-name">Custos Diretos (Equipamentos, Materiais de Treino)</span>
+                        <span class="cost-val">18%</span>
                     </div>
-
-                    <div class="legend-group group-emergency">
-                        <h4 class="grp-title">EMERGÊNCIAS</h4>
-                        <ul>
-                            <li><span>Reserva estratégica</span> <strong>16%</strong></li>
-                        </ul>
+                    <div class="cost-item highlight-cost">
+                        <span class="cost-name">Reserva Estratégica (Emergências e Expansão)</span>
+                        <span class="cost-val">16%</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contribuição para o PIB -->
-    <section id="pib" class="section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>CONTRIBUIÇÃO PARA O PIB</h2>
-                <p class="main-desc">"A Girls Powers é parte do setor de serviços, promovendo saúde, lazer e bem-estar."</p>
-                <p class="highlight-pib">"O setor representa cerca de 70% do PIB brasileiro e é essencial para o desenvolvimento do país e geração de empregos."</p>
+    <!-- PIB e Impacto Econômico -->
+    <section id="pib" class="section-block">
+        <div class="section-container">
+            <div class="section-header-center">
+                <span class="section-subtitle">MACROECONOMIA</span>
+                <h2 class="section-title">CONTRIBUIÇÃO PARA O PIB</h2>
+                <p class="paragraph-text center-max">
+                    Inserida no setor de serviços — responsável por cerca de <strong>70% do PIB brasileiro</strong> —, a Girls Power impacta diretamente a economia local.
+                </p>
             </div>
 
-            <div class="pib-cards-grid">
-                <div class="card-item">
-                    <h3>ECONOMIA</h3>
-                    <p>O mercado fitness movimenta bilhões e impulsiona a economia.</p>
+            <div class="grid-4col">
+                <div class="pib-card">
+                    <h4>Geração de Empregos</h4>
+                    <p>Oportunidades diretas e indiretas no setor fitness e de bem-estar.</p>
                 </div>
-                <div class="card-item">
-                    <h3>GERAÇÃO DE EMPREGOS</h3>
-                    <p>Gera empregos diretos e indiretos em diversas áreas da academia.</p>
+                <div class="pib-card">
+                    <h4>Movimentação Financeira</h4>
+                    <p>Incentivo à cadeia de suprimentos, equipamentos e nutrição.</p>
                 </div>
-                <div class="card-item">
-                    <h3>IMPACTO SOCIAL</h3>
-                    <p>Promove saúde, qualidade de vida e bem-estar da população.</p>
+                <div class="pib-card">
+                    <h4>Saúde Pública</h4>
+                    <p>Redução de custos preventivos com saúde através da atividade física.</p>
                 </div>
-                <div class="card-item">
-                    <h3>DESENVOLVIMENTO CONTÍNUO</h3>
-                    <p>Incentiva inovação em equipamentos, tecnologia, suplementos e serviços.</p>
+                <div class="pib-card">
+                    <h4>Inovação em Serviços</h4>
+                    <p>Fortalecimento do mercado consumidor exclusivo para mulheres.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Conclusão -->
-    <section id="conclusao" class="section-padding bg-alt final-section">
-        <div class="glow-sphere glow-3"></div>
-        <div class="container">
-            <div class="conclusao-content">
-                <h2>CONCLUSÃO</h2>
-                <p class="p-lead">"A Girls Power é mais que uma academia: é um espaço criado para mulheres se sentirem fortes, confiantes e acolhedoras todos os dias."</p>
-                <p class="p-sub">"Unimos treino, bem-estar e cuidado em um ambiente seguro e pensado para cada mulher ser sua melhor versão."</p>
-                
-                <div class="final-slogan-box">
-                    <span class="heart-icon">💖</span>
-                    <h3>"SUA FORÇA, SUA CONFIANÇA, SEU LUGAR."</h3>
-                </div>
+    <section class="section-block bg-darker text-center">
+        <div class="section-container">
+            <span class="section-subtitle">VISÃO DE FUTURO</span>
+            <h2 class="section-title">O FUTURO DO FITNESS FEMININO</h2>
+            <p class="paragraph-text center-max margin-top-sm">
+                A Girls Power consolida-se como um modelo sustentável, inclusivo e altamente rentável, unindo gestão empresarial eficiente e impacto social positivo.
+            </p>
+            <div class="slogan-banner margin-top-md">
+                "SUA FORÇA. SUA CONFIANÇA. SEU LUGAR."
             </div>
         </div>
     </section>
 
-    <!-- Rodapé Minimalista -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-logo">GIRLS <span>POWER</span> ACADEMIA</div>
-            <p class="footer-slogan">"Sua força, sua confiança, seu lugar."</p>
-            <p class="footer-copy">&copy; Trabalho Escolar. Todos os direitos reservados do projeto.</p>
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="section-container footer-flex">
+            <div class="footer-brand">
+                GIRLS<span>POWER</span>
+                <p>© Projetos Escolares. Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-meta">
+                <span>1º T — Orientador Douglas Rosa</span>
+            </div>
         </div>
     </footer>
 
-    <!-- Script de Animações e Interatividade -->
+    <!-- JavaScript -->
     <script>
-        // Menu Mobile Hamburger
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const navMenu = document.getElementById('nav-menu');
+        // Menu Mobile Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mainNav = document.getElementById('main-nav');
 
-        hamburgerBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburgerBtn.classList.toggle('open');
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('nav-open');
+            menuToggle.classList.toggle('is-active');
         });
 
-        // Fechar menu ao clicar num link
-        document.querySelectorAll('.nav-link').forEach(link => {
+        // Fechar menu ao clicar em um item
+        document.querySelectorAll('.main-nav a').forEach(link => {
             link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                hamburgerBtn.classList.remove('open');
+                mainNav.classList.remove('nav-open');
+                menuToggle.classList.remove('is-active');
             });
         });
 
-        // Lógica da Roleta de Brindes
-        const spinBtn = document.getElementById('spin-btn');
-        const wheel = document.getElementById('wheel');
-        const modal = document.getElementById('result-modal');
-        const closeModal = document.getElementById('close-modal');
-        const modalResultText = document.getElementById('modal-result-text');
+        // Roleta Interativa
+        const spinTrigger = document.getElementById('spin-trigger');
+        const wheelDisc = document.getElementById('wheel-disc');
+        const resultModal = document.getElementById('result-modal');
+        const modalOutcome = document.getElementById('modal-outcome');
+        const modalClose = document.getElementById('modal-close');
 
         const prizes = [
             "PASSOU A VEZ",
-            "10% OFF NA PRÓXIMA MENSALIDADE",
-            "GANHOU UMA ECOBAG",
-            "GANHOU UMA GARRAFINHA TÉRMICA",
-            "FAÇA 1 FLEXÃO",
-            "FAÇA 5 AGACHAMENTOS",
-            "GANHOU 1 CONSULTA NA NUTRICIONISTA GRATUITA"
+            "10% OFF NA MENSALIDADE",
+            "ECOBAG EXCLUSIVA",
+            "GARRAFA TÉRMICA",
+            "1 FLEXÃO",
+            "5 AGACHAMENTOS",
+            "CONSULTA NUTRICIONAL GRÁTIS"
         ];
 
-        let currentRotation = 0;
+        let currentAngle = 0;
 
-        spinBtn.addEventListener('click', () => {
-            spinBtn.disabled = true;
+        spinTrigger.addEventListener('click', () => {
+            spinTrigger.disabled = true;
+            const prizeIndex = Math.floor(Math.random() * prizes.length);
+            const segmentAngle = 360 / prizes.length;
             
-            // Escolhe um prêmio aleatório
-            const randomIndex = Math.floor(Math.random() * prizes.length);
-            const prizeDegrees = 360 / prizes.length;
-            
-            // Calcula rotação completa + ângulo do prêmio
-            const extraRounds = 5 * 360; // 5 giros completos
-            const targetDegree = extraRounds + (randomIndex * prizeDegrees) + (prizeDegrees / 2);
-            
-            currentRotation += targetDegree;
-            wheel.style.transform = `rotate(${currentRotation}deg)`;
+            // Adiciona giros completos + ângulo do item
+            const rotation = 1800 + (prizeIndex * segmentAngle);
+            currentAngle += rotation;
+
+            wheelDisc.style.transform = `rotate(${currentAngle}deg)`;
 
             setTimeout(() => {
-                modalResultText.textContent = prizes[prizes.length - 1 - randomIndex];
-                modal.classList.add('active');
-                spinBtn.disabled = false;
+                modalOutcome.textContent = prizes[prizes.length - 1 - prizeIndex];
+                resultModal.classList.add('modal-open');
+                spinTrigger.disabled = false;
             }, 4000);
         });
 
-        closeModal.addEventListener('click', () => {
-            modal.classList.remove('active');
+        modalClose.addEventListener('click', () => {
+            resultModal.classList.remove('modal-open');
         });
     </script>
 </body>
