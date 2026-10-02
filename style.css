@@ -1,63 +1,77 @@
-/* Variáveis de Cores (Estilo CBF) */
+/* ==========================================================================
+   1. VARIÁVEIS DE DESIGN SYSTEM E RESET
+   ========================================================================== */
 :root {
-    --cor-verde: #009b3a;
-    --cor-amarelo: #fedf00;
-    --cor-azul: #002776;
-    --cor-fundo: #f4f7f6;
+    --cor-rosa-principal: #ff2a75;
+    --cor-rosa-hover: #e01f63;
+    --cor-roxo-escuro: #2b102f;
+    --cor-fundo-claro: #fcf8f9;
     --cor-texto: #333333;
+    --cor-texto-suave: #666666;
     --cor-branco: #ffffff;
+    --sombra-suave: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --sombra-destaque: 0 15px 35px rgba(255, 42, 117, 0.2);
+    --transicao: all 0.3s ease;
 }
 
-/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--cor-fundo);
+    background-color: var(--cor-fundo-claro);
     color: var(--cor-texto);
     line-height: 1.6;
 }
 
-/* ================= HEADER / NAVEGAÇÃO ================= */
-.main-header {
-    background-color: var(--cor-azul);
-    padding: 15px 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-container {
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* ==========================================================================
+   2. NAVEGAÇÃO E CABEÇALHO
+   ========================================================================== */
+.main-header {
+    background-color: var(--cor-roxo-escuro);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Ajuda no celular */
 }
 
 .logo {
-    color: var(--cor-amarelo);
-    font-size: 1.5rem;
+    color: var(--cor-branco);
+    font-size: 1.6rem;
     font-weight: 800;
-    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
 
 .logo span {
-    color: var(--cor-branco);
-    font-weight: 400;
+    color: var(--cor-rosa-principal);
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 20px;
 }
 
 .main-nav a {
@@ -65,151 +79,434 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: var(--transicao);
 }
 
 .main-nav a:hover {
-    background-color: var(--cor-amarelo);
-    color: var(--cor-azul);
+    color: var(--cor-rosa-principal);
 }
 
-/* ================= CONTEÚDO PRINCIPAL ================= */
-.conteudo-site {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+.main-nav .btn-nav {
+    background-color: var(--cor-rosa-principal);
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: var(--cor-branco) !important;
 }
 
-/* Seção Hero (Introdução) */
+.main-nav .btn-nav:hover {
+    background-color: var(--cor-rosa-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   3. SEÇÃO HERO (Apresentação)
+   ========================================================================== */
 .hero-section {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    color: var(--cor-branco);
     text-align: center;
-    margin-bottom: 60px;
 }
 
-h1 {
-    font-size: 3rem;
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(43, 16, 47, 0.85), rgba(0, 0, 0, 0.6));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
     font-weight: 800;
-    color: var(--cor-verde);
     margin-bottom: 20px;
-    text-transform: uppercase;
+    line-height: 1.2;
 }
 
-.intro-text {
-    background: var(--cor-branco);
-    padding: 30px;
-    border-radius: 12px;
-    margin: 0 auto;
-    max-width: 800px; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    border-left: 6px solid var(--cor-amarelo); /* Detalhe amarelo */
-    font-size: 1.1rem;
+.hero-content h1 span {
+    color: var(--cor-rosa-principal);
 }
 
-.intro-text p {
-    margin-bottom: 15px;
-}
-.intro-text p:last-child {
-    margin-bottom: 0;
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
 }
 
-/* Títulos das Seções */
-h2 {
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Botões Genéricos */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transicao);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--cor-rosa-principal);
+    color: var(--cor-branco);
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-rosa-hover);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--cor-branco);
+    border: 2px solid var(--cor-branco);
+}
+
+.btn-secondary:hover {
+    background-color: var(--cor-branco);
+    color: var(--cor-roxo-escuro);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 2px solid var(--cor-rosa-principal);
+    color: var(--cor-rosa-principal);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background-color: var(--cor-rosa-principal);
+    color: var(--cor-branco);
+}
+
+/* ==========================================================================
+   4. ESTRUTURA GERAL DAS SEÇÕES
+   ========================================================================== */
+.section-container {
+    padding: 80px 0;
+}
+
+.section-title {
     text-align: center;
-    color: var(--cor-azul);
-    font-size: 2.2rem;
-    margin-bottom: 15px;
+    font-size: 2.3rem;
+    color: var(--cor-roxo-escuro);
+    margin-bottom: 10px;
     position: relative;
 }
 
-/* Tracinho amarelo embaixo do h2 */
-h2::after {
+.section-title::after {
     content: '';
     display: block;
     width: 60px;
     height: 4px;
-    background-color: var(--cor-amarelo);
-    margin: 10px auto 40px auto;
+    background-color: var(--cor-rosa-principal);
+    margin: 10px auto 0 auto;
     border-radius: 2px;
 }
 
-.subtitulo-texto {
+.section-subtitle {
     text-align: center;
-    color: #555555;
-    margin: -20px auto 40px auto;
-    max-width: 700px;
-    font-size: 1.05rem;
+    color: var(--cor-texto-suave);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
 }
 
-/* ================= GRID DE CARDS ================= */
+/* Grid Básico */
 .grid-container {
     display: grid;
-    /* Essa linha faz os cards se adaptarem na tela automaticamente */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-bottom: 60px;
 }
 
+/* ==========================================================================
+   5. CARDS DE MODALIDADES
+   ========================================================================== */
 .card {
     background: var(--cor-branco);
-    border-radius: 12px;
-    overflow: hidden; /* Faz a imagem respeitar as bordas arredondadas */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao);
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-bottom: 4px solid var(--cor-verde); /* Faixa verde embaixo da foto */
 }
 
 .card-content {
-    padding: 20px;
-    flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
+    padding: 25px;
 }
 
 .card-content h3 {
-    color: var(--cor-verde);
+    color: var(--cor-roxo-escuro);
     margin-bottom: 10px;
     font-size: 1.3rem;
 }
 
 .card-content p {
+    color: var(--cor-texto-suave);
     font-size: 0.95rem;
-    color: #444444;
 }
 
-/* ================= RODAPÉ ================= */
+/* ==========================================================================
+   6. SEÇÃO DIFERENCIAIS
+   ========================================================================== */
+.diferenciais-section {
+    background-color: var(--cor-roxo-escuro);
+    color: var(--cor-branco);
+    padding: 80px 0;
+}
+
+.diferenciais-section .section-title {
+    color: var(--cor-branco);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.feature-item {
+    padding: 20px;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--cor-rosa-principal);
+}
+
+.feature-item p {
+    color: #d1c4d4;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   7. PLANOS
+   ========================================================================== */
+.planos-grid {
+    align-items: center;
+}
+
+.plano-card {
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #e2e2e2;
+}
+
+.plano-card.plano-destaque {
+    border: 2px solid var(--cor-rosa-principal);
+    transform: scale(1.05);
+    box-shadow: var(--sombra-destaque);
+}
+
+.plano-card.plano-destaque:hover {
+    transform: scale(1.08);
+}
+
+.badge-destaque {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cor-rosa-principal);
+    color: var(--cor-branco);
+    padding: 5px 15px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.plano-header h3 {
+    font-size: 1.5rem;
+    color: var(--cor-roxo-escuro);
+    margin-bottom: 15px;
+}
+
+.preco {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--cor-rosa-principal);
+    margin-bottom: 25px;
+}
+
+.preco span {
+    font-size: 1rem;
+    color: var(--cor-texto-suave);
+    font-weight: 400;
+}
+
+.plano-recursos {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.plano-recursos li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+    color: var(--cor-texto-suave);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   8. FORMULÁRIO E CONTATO
+   ========================================================================== */
+.contato-section {
+    background-color: var(--cor-branco);
+    padding: 80px 0;
+}
+
+.contato-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.contato-info h2 {
+    font-size: 2.2rem;
+    color: var(--cor-roxo-escuro);
+    margin-bottom: 15px;
+}
+
+.contato-info p {
+    color: var(--cor-texto-suave);
+    margin-bottom: 25px;
+}
+
+.contato-info ul {
+    list-style: none;
+}
+
+.contato-info li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+}
+
+.contato-form {
+    background-color: var(--cor-fundo-claro);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--sombra-suave);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--cor-roxo-escuro);
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: var(--transicao);
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--cor-rosa-principal);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* ==========================================================================
+   9. RODAPÉ E RESPONSIVIDADE
+   ========================================================================== */
 footer {
-    background-color: var(--cor-azul);
+    background-color: var(--cor-roxo-escuro);
     color: var(--cor-branco);
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+    padding: 25px 0;
     font-size: 0.9rem;
 }
 
-/* Ajustes para Celular (Responsividade extra) */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.2rem;
+footer p {
+    opacity: 0.8;
+}
+
+/* Responsividade (Telas Menores) */
+@media (max-width: 900px) {
+    .contato-container {
+        grid-template-columns: 1fr;
     }
+    
+    .plano-card.plano-destaque {
+        transform: none;
+    }
+    
+    .plano-card.plano-destaque:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
     .header-container {
         flex-direction: column;
         gap: 15px;
     }
+
     .main-nav ul {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
     }
 }
