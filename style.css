@@ -1,0 +1,215 @@
+/* Variáveis de Cores (Estilo CBF) */
+:root {
+    --cor-verde: #009b3a;
+    --cor-amarelo: #fedf00;
+    --cor-azul: #002776;
+    --cor-fundo: #f4f7f6;
+    --cor-texto: #333333;
+    --cor-branco: #ffffff;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* ================= HEADER / NAVEGAÇÃO ================= */
+.main-header {
+    background-color: var(--cor-azul);
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ajuda no celular */
+}
+
+.logo {
+    color: var(--cor-amarelo);
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: var(--cor-branco);
+    font-weight: 400;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.main-nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: var(--cor-amarelo);
+    color: var(--cor-azul);
+}
+
+/* ================= CONTEÚDO PRINCIPAL ================= */
+.conteudo-site {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Seção Hero (Introdução) */
+.hero-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--cor-verde);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.intro-text {
+    background: var(--cor-branco);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 0 auto;
+    max-width: 800px; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid var(--cor-amarelo); /* Detalhe amarelo */
+    font-size: 1.1rem;
+}
+
+.intro-text p {
+    margin-bottom: 15px;
+}
+.intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Títulos das Seções */
+h2 {
+    text-align: center;
+    color: var(--cor-azul);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Tracinho amarelo embaixo do h2 */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--cor-amarelo);
+    margin: 10px auto 40px auto;
+    border-radius: 2px;
+}
+
+.subtitulo-texto {
+    text-align: center;
+    color: #555555;
+    margin: -20px auto 40px auto;
+    max-width: 700px;
+    font-size: 1.05rem;
+}
+
+/* ================= GRID DE CARDS ================= */
+.grid-container {
+    display: grid;
+    /* Essa linha faz os cards se adaptarem na tela automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background: var(--cor-branco);
+    border-radius: 12px;
+    overflow: hidden; /* Faz a imagem respeitar as bordas arredondadas */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--cor-verde); /* Faixa verde embaixo da foto */
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
+}
+
+.card-content h3 {
+    color: var(--cor-verde);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #444444;
+}
+
+/* ================= RODAPÉ ================= */
+footer {
+    background-color: var(--cor-azul);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* Ajustes para Celular (Responsividade extra) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
